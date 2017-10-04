@@ -1,0 +1,35 @@
+@import "../../../common-style";
+
+.post-detail {
+    padding:20px 0 15px 0;
+    border-bottom: 1px solid lighten($baseColor, 75%);
+
+    div.post-title{
+       font-size:2.5rem;
+       font-weight:600;
+       padding:15px 0;
+    }
+
+    section.post-content {
+        line-height:2rem;
+        font-size: 1.2rem;
+    }
+
+    .post-tip{
+        display: flex;
+        flex-direction: row-reverse;
+        color: lighten($baseColor, 35%);
+        font-size:1.2rem;
+        padding:15px 0;
+
+        span{
+            display: inline-block;
+            margin-left:25px;
+
+            &:before {
+                padding-right:6px;
+            }
+        }
+    }
+
+}

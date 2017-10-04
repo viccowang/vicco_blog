@@ -1,0 +1,56 @@
+@import "../common-style";
+
+.header {
+    position:relative;
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $headerColor;
+    color: $fontLightColor;
+
+    .header-wrapper{
+        display: flex;
+        align-items: center;
+        position: relative;
+
+
+        .blog-name{
+            font-size:1.8rem;
+        }
+    
+        .navbar{
+            padding-left:100px;
+            
+            ul{
+                list-style:none;
+                display: flex;
+                margin:0; //fixes bootstrap override
+                
+                li{
+                    padding:10px 35px;
+                    margin-right:10px;
+                    border-radius:5px;
+                    cursor: pointer;
+
+                    &.active { 
+                        background: darken( $headerColor, 15% );
+                    }
+
+                    &:last-child {
+                        margin-right:0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+.content-container{
+    padding-top:20px;
+}
+.footer {
+    height:120px;
+    background: $footerColor;
+    color: lighten($fontBaseColor, 40%);
+}

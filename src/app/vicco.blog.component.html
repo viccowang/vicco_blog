@@ -1,0 +1,17 @@
+<div class="header">
+    <div class="header-wrapper container">
+        <div class="blog-name">{{blogName}}</div>
+        <div class="navbar">
+            <ul>
+                <li routerLink="/home" routerLinkActive="active">最近的情况</li>
+                <li routerLink="/work-experience" routerLinkActive="active">工作经历</li>
+                <li routerLink="/commit" routerLinkActive="active">给我留言</li>
+                <li routerLink="/about-me" routerLinkActive="active">关于我</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content-container">
+    <router-outlet></router-outlet>
+</div>
+<div class="footer">footer</div>

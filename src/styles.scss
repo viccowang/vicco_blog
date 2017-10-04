@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    padding:0 !important;
+    margin:0 !important;
+    font-family: 'Arial','Microsoft Yahei UI';
+}
+input, textarea, div, ul, li, span {
+    outline: none;
+}
+
+@import '/assets/bootstrap-4.0/bootstrap.min.css';
+@import '/assets/font-alimama/iconfont.css';

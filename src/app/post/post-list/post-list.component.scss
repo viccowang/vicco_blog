@@ -1,0 +1,45 @@
+@import "../../../common-style";
+
+.post-list{
+
+    .post-content{
+        padding:15px 0;
+        border-bottom: 1px solid lighten($baseColor, 75%);
+
+        h3 { 
+            padding:10px 0;
+            font-weight: 600;
+        }
+        .summary {
+            text-indent:24px;
+            line-height:1.9rem;
+            overflow: hidden;
+            word-break: break-all;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            font-size:1rem;
+        }
+        .tip {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top:5px;
+            color: lighten($baseColor, 35%);
+
+            span { 
+                display: inline-block;
+                margin-left: 20px;
+                
+                &:before{
+                    font-size:1.1rem;
+                    padding-right:8px;
+                }
+            }
+        }
+
+    }
+    
+    .paginations {
+        margin-top:10px;
+    }
+
+}
