@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogRoutes } from './vicco.blog.routers';
 
@@ -21,7 +21,7 @@ import { AboutmeComponent } from './about-me/about-me.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpModule,
+    HttpClientModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(BlogRoutes)
   ],

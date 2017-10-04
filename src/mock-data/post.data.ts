@@ -13,7 +13,7 @@ Mock.mock('/postData/getPost', {
     ]
 });
 
-Mock.mock(/\/postData\/getPostDetail\//, {
+Mock.mock('/postData/getPostDetail', {
     'data': {
         'id': `@string('lower',10)`,
         'title': '@cparagraph(1)',
