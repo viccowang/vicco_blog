@@ -1,0 +1,11 @@
+<div class="small-list">
+    <header>{{headerName}}</header>
+    <section>
+        <ul>
+            <li *ngFor="let list of contentList" (click)="listClick(list.id)">
+                <span class="title">{{ list.title }}</span>
+                <!-- <span class="date">{{ list.date }}</span> -->
+            </li>
+        </ul>
+    </section>
+</div>

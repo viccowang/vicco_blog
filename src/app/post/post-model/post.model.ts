@@ -1,8 +1,9 @@
 export class Post {
     id: string;
     title: string;
-    summary: string;
+    summary?: string;
+    content?: string;
     date: string;
-    views: number;
-    reply: number;
+    views?: number;
+    reply?: number;
 }

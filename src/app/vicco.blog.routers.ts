@@ -29,6 +29,6 @@ export const BlogRoutes: Routes = [
     },
     {
         path: '**',
-        redirectTo: './home/home.module#HomeModule'
+        redirectTo: './home/primenghome.module#HomeModule'
     }
 ];

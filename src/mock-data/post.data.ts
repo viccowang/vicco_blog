@@ -1,5 +1,7 @@
 import Mock from 'mockjs';
-
+/**
+ * Mock首页10条博客数据
+ */
 Mock.mock('/postData/getPost', {
     'data|10': [
         {
@@ -13,6 +15,9 @@ Mock.mock('/postData/getPost', {
     ]
 });
 
+/**
+ * Mock博客详情页面的博客数据
+ */
 Mock.mock('/postData/getPostDetail', {
     'data': {
         'id': `@string('lower',10)`,
@@ -23,4 +28,18 @@ Mock.mock('/postData/getPostDetail', {
         'reply': '@natural(1,500)'
     }
 });
+
+/**
+ * Mock 最近热门数据
+ */
+Mock.mock('/postData/getHotPost', {
+    'data|10': [
+        {
+            'id': `@string('lower',10)`,
+            'title': '@cparagraph(1)',
+            'date': '@Date'
+        }
+    ]
+});
+
 
