@@ -1,27 +1,11 @@
 # ViccoBlog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+### 创建目的
+该项目基于 Angular5.0 / Typescript 技术构建， 由 Angular CLI 创建生成。项目构建的目的是为了实战学习Angular与Typescript。
+该项目目前正在开发学习中，参考了大漠的Nicefish `https://github.com/damoqiongqiu/NiceFish` 学习指南；
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+###项目启动：
+```
+npm start or ng serve
+ng serve --port xxxx
+```
