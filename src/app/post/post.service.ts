@@ -18,9 +18,15 @@ export class PostService {
     constructor(private http: HttpClient) { }
 
     getPostList(page: string): Observable<Post[]> {
-        return this.http.get<PostData>('/postData/getPost')
+        return this.http.post<PostData>('/postData/getPost', {'page': page})
             .map(res => res.data)
             .catch((error: any) => Observable.throw(error || 'Server error.'));
+    }
+
+    getHotPost(): Observable<Post[]> {
+        return this.http.get<PostData>('/postData/getHotPost')
+            .map(res => res.data)
+            .catch((error: any) => Observable.throw(error || 'service error'));
     }
 
     getPostDetail(postId: string): Observable<Post> {

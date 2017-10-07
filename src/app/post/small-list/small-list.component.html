@@ -2,7 +2,7 @@
     <header>{{headerName}}</header>
     <section>
         <ul>
-            <li *ngFor="let list of contentList" (click)="listClick(list.id)">
+            <li *ngFor="let list of contentList" (click)="showDetail(list.id)">
                 <span class="title">{{ list.title }}</span>
                 <!-- <span class="date">{{ list.date }}</span> -->
             </li>

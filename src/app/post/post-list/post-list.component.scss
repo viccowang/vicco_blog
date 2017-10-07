@@ -42,9 +42,11 @@
         }
 
     }
-    
-    .paginations {
-        margin-top:10px;
+
+    .paginations{
+        display: flex;
+        justify-content: center;
+        padding:10px 0;
     }
 
 }

@@ -2,47 +2,65 @@
 
 .header {
     position:relative;
-    height:80px;
     display: flex;
     align-items: center;
-    justify-content: center;
     background: $headerColor;
     color: $fontLightColor;
 
-    .header-wrapper{
-        display: flex;
-        align-items: center;
-        position: relative;
 
 
-        .blog-name{
-            font-size:1.8rem;
-        }
-    
-        .navbar{
-            padding-left:100px;
+    .blog-name{
+        width:200px;
+        margin:0 100px 0 50px;
+        text-align: center;
+        font-size:1.8rem;
+    }
+
+    .navbar{
+        flex:1;
+        padding:0;
+        
+        ul{
+            list-style:none;
+            display: flex;
+            padding:0;
+            margin:0; //fixes bootstrap override
             
-            ul{
-                list-style:none;
-                display: flex;
-                margin:0; //fixes bootstrap override
-                
-                li{
-                    padding:10px 35px;
-                    margin-right:10px;
-                    border-radius:5px;
-                    cursor: pointer;
+            li{
+                padding:20px 35px;
+                cursor: pointer;
 
-                    &.active { 
-                        background: darken( $headerColor, 15% );
-                    }
+                &:hover {
+                    background: darken( $headerColor, 5% );
+                }
 
-                    &:last-child {
-                        margin-right:0;
-                    }
+                &.active { 
+                    background: darken( $headerColor, 15% );
+                }
+
+                &:last-child {
+                    margin-right:0;
                 }
             }
         }
+    }
+
+    .admin-ctrl{
+        display: flex;
+        align-items: center;
+        margin-right:10px;
+
+        >span {
+            display: inline-block;
+            margin-right:35px;
+        }
+        >div {
+            padding:5px 10px;
+            margin:0 5px;
+            border-radius:8px;
+            border:1px solid lighten($baseColor , 55%);
+        }
+    
     }
 
 }

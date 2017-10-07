@@ -28,6 +28,10 @@ export const BlogRoutes: Routes = [
         redirectTo: 'home'
     },
     {
+        path: 'manage',
+        loadChildren: './manage/manage.module#ManageModule'
+    },
+    {
         path: '**',
         redirectTo: './home/primenghome.module#HomeModule'
     }

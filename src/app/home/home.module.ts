@@ -6,17 +6,15 @@ import { HomeComponent } from './home.component';
 import { homeRouter } from './home.router';
 import { HomeService } from './home.service';
 
-import { SmallListComponent } from '../small-list/small-list.component';
 
 @NgModule({
     declarations: [
-        HomeComponent,
-        SmallListComponent
+        HomeComponent
     ],
     imports: [
         CommonModule,
         RouterModule.forChild(homeRouter)
     ],
-    providers: [HomeService]
+    providers: []
 })
 export class HomeModule { }

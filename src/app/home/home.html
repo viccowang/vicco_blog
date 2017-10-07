@@ -1,12 +1,3 @@
 <div class="post-container container" [@flyIn]="'active'">
-    <div class="row">
-        <div class="col">
-            <!-- blog post -->
-            <router-outlet></router-outlet>
-        </div>
-        <div class="col-3">
-            <!-- blog informations -->
-            <small-list [headerName]="listHeaderName" [contentList]="contentList" (listClickToDisplay)="listClick($event)"></small-list>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </div>

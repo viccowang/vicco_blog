@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-
 import { Post } from '../post-model/post.model';
 import { PostService } from '../post.service';
 
@@ -12,7 +11,9 @@ import { PostService } from '../post.service';
 })
 
 export class PostListComponent implements OnInit {
+    listHeaderName = '最近热门';
     postList: Post[];
+    contentList: Post[] = [];
     currentPage: string;
 
     constructor(
@@ -28,6 +29,10 @@ export class PostListComponent implements OnInit {
             // 获取blog数据
             this.getPostList(params.page);
         });
+        // 获取热门文章
+        this.postService.getHotPost().subscribe(data => {
+            this.contentList = data;
+        });
     }
 
     /**
@@ -38,5 +43,14 @@ export class PostListComponent implements OnInit {
         this.postService.getPostList(page).subscribe(data => {
             this.postList = data;
         });
+    }
+
+    switchPage(pageNumber: number) {
+        console.log(pageNumber);
+        this.router.navigate(['/home/page', pageNumber]);
+    }
+
+    showSideBlogDetail(postId: string) {
+        // 
     }
 }

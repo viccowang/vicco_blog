@@ -13,11 +13,6 @@ import { PostData } from '../post/post-model/post-data.model';
 @Injectable()
 export class HomeService {
 
-    constructor(private http: HttpClient) { }
+    constructor() { }
 
-    getHotPost(): Observable<Post[]> {
-        return this.http.get<PostData>('/postData/getHotPost')
-            .map(res => res.data)
-            .catch((error: any) => Observable.throw(error || 'service error'));
-    }
 }

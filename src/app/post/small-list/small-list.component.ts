@@ -13,10 +13,10 @@ export class SmallListComponent {
     @Input()
     contentList: string[];
     @Output()
-    listClickToDisplay: EventEmitter<any> = new EventEmitter();
+    clickToDisplayDetail: EventEmitter<any> = new EventEmitter();
 
-    listClick(postId: string) {
-        this.listClickToDisplay.emit(postId);
+    showDetail(postId: string) {
+        this.clickToDisplayDetail.emit(postId);
     }
 
 }
