@@ -20,8 +20,11 @@ export class PostDetailComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.activedRouter.params.subscribe(params => {
-            this.getPostDetail(params.postId);
+        // this.activedRouter.params.subscribe(params => {
+        //     this.getPostDetail(params.postId);
+        // });
+        this.activedRouter.paramMap.subscribe( params => {
+            this.getPostDetail(params.get('postId'));
         });
     }
 

@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { BlogCommitComponent } from './commit/commit.component';
 import { AboutmeComponent } from './about-me/about-me.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 
 export const BlogRoutes: Routes = [
@@ -26,6 +27,10 @@ export const BlogRoutes: Routes = [
         path: '',
         pathMatch: 'full',
         redirectTo: 'home'
+    },
+    {
+        path: 'login',
+        component: UserLoginComponent
     },
     {
         path: 'manage',

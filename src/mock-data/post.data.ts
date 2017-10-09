@@ -42,4 +42,11 @@ Mock.mock('/postData/getHotPost', {
     ]
 });
 
+Mock.mock('/userLogin', {
+    'data' : {
+        name : 'Vicco',
+        nickName : '泡面不吃泡面',
+        email: 'viccowang@gmail.com'
+    }
+});
 
