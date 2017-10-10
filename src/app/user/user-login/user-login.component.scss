@@ -1,0 +1,16 @@
+.login-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:400px;
+
+    .login{
+        width:600px;
+        padding:25px;
+        overflow: hidden;
+    
+        button{
+            float:right;
+        }
+    }
+}
