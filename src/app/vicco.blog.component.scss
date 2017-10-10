@@ -56,19 +56,11 @@
             margin-right:35px;
         }
         >div.admin-icon {
-            padding:20px 10px;
+            padding:10px;
             margin:0 5px;
-<<<<<<< HEAD
-            cursor: pointer;
-
-            &:hover{
-                background: lighten( $headerColor, 5% );
-            }
-=======
             border-radius:8px;
             border:1px solid lighten($baseColor , 55%);
             cursor: pointer;
->>>>>>> 5101f3a15ca70d084bcf85337ed0da5325f87b7f
         }
     
     }

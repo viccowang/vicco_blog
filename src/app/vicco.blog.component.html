@@ -8,21 +8,13 @@
             <li routerLink="/about-me" routerLinkActive="active">关于我</li>
         </ul>
     </div>
-<<<<<<< HEAD
-    <div class="admin-ctrl">
-        <span>欢迎回来！Vicco</span>
-        <div class="admin-icon" routerLink="/manage">manage</div>
-        <div class="admin-icon">Login</div>
-        <div class="admin-icon">Logout</div>
-=======
     <div *ngIf="isLogin" class="admin-ctrl">
         <span>欢迎回来！{{ currentUser }}</span>
-        <div routerLink="/manage">manage</div>
-        <div (click)="logout()">Logout</div>
+        <div class="admin-icon" routerLink="/manage">manage</div>
+        <div class="admin-icon" (click)="logout()">Logout</div>
     </div>
     <div *ngIf="!isLogin" class="admin-ctrl">
-        <div routerLink="/login">Login</div>
->>>>>>> 5101f3a15ca70d084bcf85337ed0da5325f87b7f
+        <div class="admin-icon" routerLink="/login">Login</div>
     </div>
 </div>
 <div class="content-container">
