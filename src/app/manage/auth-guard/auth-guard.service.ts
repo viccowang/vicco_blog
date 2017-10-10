@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, CanActivateChild, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-import { UserLoginService } from '../../user/user-login/user-login.service';
+import { UserAuthGuardService } from '../../user/auth-guard/auth-guard.service';
 
 
 @Injectable()
 export class ManageAuthGuardService implements CanActivate, CanActivateChild {
 
     constructor(
-        private userLoginService: UserLoginService,
+        private userAuthGuardService: UserAuthGuardService,
         private router: Router
     ) {}
 
@@ -23,9 +23,10 @@ export class ManageAuthGuardService implements CanActivate, CanActivateChild {
     }
 
     checkLogin(url: string): boolean {
-        if (this.userLoginService.isLogin) { return true; }
+        // 目前仅以该服务下的isLogin状态来判断是否已登录
+        if (this.userAuthGuardService.isLogin) { return true; }
 
-        this.userLoginService.redirectURL = url;
+        this.userAuthGuardService.redirectURL = url;
 
         this.router.navigate(['/login']);
 

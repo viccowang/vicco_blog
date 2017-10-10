@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from './user/user.model/user.model';
 
 import { UserLoginService } from './user/user-login/user-login.service';
+import { UserAuthGuardService } from './user/auth-guard/auth-guard.service';
 
 @Component({
   selector: 'vicco-blog-root',
@@ -14,16 +15,21 @@ export class ViccoBlogComponent implements OnInit {
   user: User;
   // is login
   get isLogin(): boolean {
-    return this.loginService.isLogin;
+    return this.userAuthGuardService.isLogin;
   }
   // login user
-  currentUser: User;
+  get currentUser() {
+    return window.sessionStorage.getItem('userName');
+  }
 
-  constructor(private loginService: UserLoginService) { }
+  constructor(
+    private loginService: UserLoginService,
+    private userAuthGuardService: UserAuthGuardService,
+  ) { }
 
   ngOnInit() {
     // get login user
-    this.loginService.currentUser.subscribe( user => this.currentUser = user);
+    // this.loginService.currentUser.subscribe();
   }
 
   logout() {

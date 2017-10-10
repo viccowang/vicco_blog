@@ -8,11 +8,13 @@
             <li routerLink="/about-me" routerLinkActive="active">关于我</li>
         </ul>
     </div>
-    <div class="admin-ctrl">
-        <span *ngIf="isLogin && currentUser">欢迎回来！{{ currentUser.name }}</span>
-        <div *ngIf="isLogin" routerLink="/manage">manage</div>
-        <div *ngIf="!isLogin" routerLink="/login">Login</div>
-        <div *ngIf="isLogin" (click)="logout()">Logout</div>
+    <div *ngIf="isLogin" class="admin-ctrl">
+        <span>欢迎回来！{{ currentUser }}</span>
+        <div routerLink="/manage">manage</div>
+        <div (click)="logout()">Logout</div>
+    </div>
+    <div *ngIf="!isLogin" class="admin-ctrl">
+        <div routerLink="/login">Login</div>
     </div>
 </div>
 <div class="content-container">

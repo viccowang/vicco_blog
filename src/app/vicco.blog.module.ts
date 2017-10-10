@@ -14,6 +14,10 @@ import { AboutmeComponent } from './about-me/about-me.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 
 import { UserLoginService } from './user/user-login/user-login.service';
+import { UserAuthGuardService } from './user/auth-guard/auth-guard.service';
+import { ManageAuthGuardService } from './manage/auth-guard/auth-guard.service';
+
+import { MockData } from '../mock-data/post.data';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,12 @@ import { UserLoginService } from './user/user-login/user-login.service';
     NgbModule.forRoot(),
     RouterModule.forRoot(BlogRoutes)
   ],
-  providers: [UserLoginService],
+  providers: [
+    UserAuthGuardService,
+    ManageAuthGuardService,
+    UserLoginService,
+    MockData,
+  ],
   bootstrap: [ViccoBlogComponent]
 })
 export class AppModule { }

@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 // 导入 Mock 随机测试数据
-import '../../mock-data/post.data';
+import { MockData } from '../../mock-data/post.data';
 
 import { Post } from './post-model/post.model';
 import { PostData } from './post-model/post-data.model';
@@ -15,22 +15,25 @@ import { PostData } from './post-model/post-data.model';
 @Injectable()
 export class PostService {
 
-    constructor(private http: HttpClient) { }
+    constructor(
+        private http: HttpClient,
+        private mockData: MockData,
+    ) { }
 
     getPostList(page: string): Observable<Post[]> {
-        return this.http.post<PostData>('/postData/getPost', {'page': page})
+        return this.http.post<PostData>(`${this.mockData.baseURL}/postData/getPost`, {'page': page})
             .map(res => res.data)
             .catch((error: any) => Observable.throw(error || 'Server error.'));
     }
 
     getHotPost(): Observable<Post[]> {
-        return this.http.get<PostData>('/postData/getHotPost')
+        return this.http.get<PostData>(`${this.mockData.baseURL}/postData/getHotPost`)
             .map(res => res.data)
             .catch((error: any) => Observable.throw(error || 'service error'));
     }
 
     getPostDetail(postId: string): Observable<Post> {
-        return this.http.post<PostData>('/postData/getPostDetail', { postId: postId})
+        return this.http.post<PostData>(`${this.mockData.baseURL}/postData/getPostDetail`, {postId: postId})
             .map(res => res.data)
             .catch((error: any) => Observable.throw(error || 'Server error.'));
     }
