@@ -6,6 +6,7 @@
     align-items: center;
     background: $headerColor;
     color: $fontLightColor;
+    overflow: hidden;
 
 
 
@@ -54,18 +55,21 @@
             display: inline-block;
             margin-right:35px;
         }
-        >div {
-            padding:5px 10px;
+        >div.admin-icon {
+            padding:20px 10px;
             margin:0 5px;
-            border-radius:8px;
-            border:1px solid lighten($baseColor , 55%);
+            cursor: pointer;
+
+            &:hover{
+                background: lighten( $headerColor, 5% );
+            }
         }
     
     }
 
 }
 .content-container{
-    padding-top:20px;
+    // padding-top:20px;
 }
 .footer {
     height:120px;

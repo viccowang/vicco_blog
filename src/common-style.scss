@@ -5,3 +5,9 @@ $headerColor            : #3F51B5;
 $footerColor            : lighten($baseColor, 75%);
 $fontBaseColor          : #212121;
 $fontLightColor         : #fff;
+
+ul,li{
+    list-style:none;
+    margin:0;
+    padding:0;
+}

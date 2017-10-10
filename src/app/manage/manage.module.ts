@@ -5,12 +5,21 @@ import { RouterModule } from '@angular/router';
 import { manageRouters } from './manage.router';
 
 import { BlogManageComponent } from './manage.component';
-import { PostManagementComponent } from './post-management/post-management.component';
+import { PostManageComponent } from './post-manage/post-manage.component';
+import { ReplyManageComponent } from './reply-manage/reply-manage.component';
+import { CommitManageComponent } from './commit-manage/commit-manage.component';
+import { UserManageComponent } from './user-manage/user-manage.component';
+import { BaseManageComponent } from './base-manage/base-manage.component';
+
 
 @NgModule({
     declarations: [
         BlogManageComponent,
-        PostManagementComponent
+        PostManageComponent,
+        ReplyManageComponent,
+        CommitManageComponent,
+        UserManageComponent,
+        BaseManageComponent,
     ],
     imports: [
         CommonModule,

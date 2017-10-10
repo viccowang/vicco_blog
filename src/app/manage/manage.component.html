@@ -1,22 +1,21 @@
-<div class="container-fluid">
+<div class="container-fluid manage-main" [@flyIn]="'active'">
     <div class="row">
         <!-- Manage routers-->
-        <div class="col-3">
+        <div class="left-menu">
            <div class="manage-nav">
-               <header>博客管理</header>
                <section>
                    <ul>
-                       <li>文章管理</li>
-                       <li>评论管理</li>
-                       <li>留言管理</li>
-                       <li>用户管理</li>
-                       <li>基础设置</li>
+                       <li [routerLink]="['/manage/post-manage/',1]" routerLinkActive="active">文章管理</li>
+                       <li [routerLink]="['/manage/reply-manage/',1]" routerLinkActive="active">评论管理</li>
+                       <li [routerLink]="['/manage/commit-manage/',1]" routerLinkActive="active">留言管理</li>
+                       <li routerLink="/manage/user-manage/" routerLinkActive="active">用户管理</li>
+                       <li routerLink="/manage/base-manage/" routerLinkActive="active">基础设置</li>
                    </ul>
                </section>
            </div>
         </div>
         <!-- Manage part-->
-        <div class="col">
+        <div class="right-content">
             <router-outlet></router-outlet>
         </div>
     </div>
