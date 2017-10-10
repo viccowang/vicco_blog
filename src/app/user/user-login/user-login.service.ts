@@ -12,9 +12,13 @@ import { UserData } from '../user.model/user-data.model';
 
 @Injectable()
 export class UserLoginService {
-
+    // login user subject object, can be subcribed
     private loginUserName: Subject<User> = new Subject<User>();
+    // Login status
     public isLogin = false;
+    // 
+    public redirectURL = '';
+    // login user observable object
     public get currentUser(): Observable<User> {
         return this.loginUserName.asObservable();
     }
@@ -25,14 +29,14 @@ export class UserLoginService {
         return this.http.post<UserData>('/userLogin', {name: user.name, password: user.password})
         .map(res => {
             this.isLogin = true;
-            this.loginUserName.next(Object.assign({}, res.data));
-            return res.data;
+            return this.loginUserName.next(Object.assign({}, res.data));
         })
         .catch((error: any) => Observable.throw(error || 'service error'));
     }
 
     logout(): void {
         this.isLogin = false;
+        this.redirectURL = '';
         this.loginUserName.next(Object.assign({}));
     }
 }

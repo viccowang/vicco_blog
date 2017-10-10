@@ -9,7 +9,7 @@
         </ul>
     </div>
     <div class="admin-ctrl">
-        <span *ngIf="isLogin">欢迎回来！Vicco</span>
+        <span *ngIf="isLogin && currentUser">欢迎回来！{{ currentUser.name }}</span>
         <div *ngIf="isLogin" routerLink="/manage">manage</div>
         <div *ngIf="!isLogin" routerLink="/login">Login</div>
         <div *ngIf="isLogin" (click)="logout()">Logout</div>

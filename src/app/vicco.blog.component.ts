@@ -16,11 +16,14 @@ export class ViccoBlogComponent implements OnInit {
   get isLogin(): boolean {
     return this.loginService.isLogin;
   }
+  // login user
+  currentUser: User;
 
   constructor(private loginService: UserLoginService) { }
 
   ngOnInit() {
-
+    // get login user
+    this.loginService.currentUser.subscribe( user => this.currentUser = user);
   }
 
   logout() {

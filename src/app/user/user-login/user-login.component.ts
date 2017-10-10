@@ -20,6 +20,7 @@ export class UserLoginComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+
   }
 
   login() {
@@ -27,7 +28,7 @@ export class UserLoginComponent implements OnInit {
       // const state: RouterState = this.router.routerState;
       // const snapshot: RouterStateSnapshot = state.snapshot;
       // const root: ActivatedRouteSnapshot = snapshot.root;
-      // console.log( root.firstChild );
+      // console.log( snapshot.url );
       if ( this.loginService.isLogin ) {
         this.router.navigate(['/home']);
       }
