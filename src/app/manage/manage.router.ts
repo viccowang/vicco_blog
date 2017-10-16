@@ -20,7 +20,11 @@ export const manageRouters: Routes = [
                 canActivateChild: [ManageAuthGuardService],
                 children: [
                     { path: '', redirectTo: 'post-manage/1', pathMatch: 'full' },
-                    { path: 'post-manage/:page', component: PostManageComponent }
+                    { path: 'post-manage/:page', component: PostManageComponent },
+                    { path: 'reply-manage/:page', component: ReplyManageComponent},
+                    { path: 'commit-manage/:page', component: CommitManageComponent},
+                    { path: 'user-manage', component: UserManageComponent},
+                    { path: 'base-manage', component: BaseManageComponent},
                 ]
             }
         ]
